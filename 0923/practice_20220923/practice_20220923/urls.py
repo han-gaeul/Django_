@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from random_game import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path 등록
+    # 1. 주소 지정
+    # 2. 어떠한 view를 실행할건지 지정
+    path('', views.index),
+    path('today-beer/', views.today_beer),
+    path('lotto/', views.lotto),
 ]
